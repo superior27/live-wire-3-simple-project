@@ -2,11 +2,14 @@
 
 namespace App\Livewire;
 
+use Livewire\Attributes\Locked;
 use Livewire\Component;
 
 class Counter extends Component
 {
+    #[Locked]
     public int $counter = 0;
+
     public string $firstName = 'Mr. Smith';
     public string $lastName;
 
