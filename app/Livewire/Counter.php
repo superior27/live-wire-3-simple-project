@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use Livewire\Attributes\Computed;
 use Livewire\Attributes\Locked;
 use Livewire\Component;
 
@@ -36,5 +37,11 @@ class Counter extends Component
     public function refresh()
     {
         $this->reset('firstName', 'lastName');
+    }
+
+    #[Computed]
+    public function fullName()
+    {
+        return "$this->firstName $this->lastName";
     }
 }

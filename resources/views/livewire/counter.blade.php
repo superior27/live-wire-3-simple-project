@@ -21,6 +21,6 @@
 
     <br>
     <br>
-    Name: {{$firstName}} {{$lastName}}
+    Name: {{$this->fullName}}
 
 </div>
