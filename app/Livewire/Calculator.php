@@ -29,5 +29,10 @@ class Calculator extends Component
         $this->n1 = 333;
     }
 
+    public function add10($props)
+    {
+        $this->$props +=10;
+    }
+
 
 }

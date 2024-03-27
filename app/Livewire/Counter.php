@@ -12,7 +12,7 @@ class Counter extends Component
     public int $counter = 0;
 
     public string $firstName = 'Mr. Smith';
-    public string $lastName;
+    public string $lastName = '';
 
     public function mount()
     {

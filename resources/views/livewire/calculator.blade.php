@@ -20,6 +20,14 @@
         </span>
     </x-primary-button>
 
+    <x-primary-button type="button" wire:click="add10('n1')">
+        add 10 to first field
+    </x-primary-button>
+
+    <x-primary-button type="button" wire:click="add10('n2')">
+        add 10 to second field
+    </x-primary-button>
+
     <br>
     <br>
     
