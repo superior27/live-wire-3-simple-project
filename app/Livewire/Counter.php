@@ -7,7 +7,7 @@ use Livewire\Component;
 class Counter extends Component
 {
     public int $counter = 0;
-    public string $firstName;
+    public string $firstName = 'Mr. Smith';
     public string $lastName;
 
     public function mount()
@@ -15,8 +15,8 @@ class Counter extends Component
         $this->counter = 10;
 
         $this->fill([
-            'firstName' => 'Lucas',
-            'lastName' => 'Lins',
+            'firstName' => 'John',
+            'lastName' => 'Doe',
         ]);
     }
 
@@ -32,6 +32,6 @@ class Counter extends Component
 
     public function refresh()
     {
-        
+        $this->reset('firstName', 'lastName');
     }
 }
