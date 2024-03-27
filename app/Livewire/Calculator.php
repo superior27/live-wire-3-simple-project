@@ -23,5 +23,10 @@ class Calculator extends Component
         $this->result = eval($expression); 
     }
 
+    public function not7()
+    {
+        $this->n1 = 333;
+    }
+
 
 }

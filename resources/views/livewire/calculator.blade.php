@@ -1,5 +1,9 @@
 <form wire:submit='calculate'>
-    <x-text-input placeholder="first number" wire:model="n1"/>
+    <x-text-input 
+        placeholder="first number" 
+        wire:model="n1"
+        wire:keydown.7='not7'
+    />
     <select wire:model='operator'class="text-red-800">
         <option value="+">+</option>
         <option value="-">-</option>
