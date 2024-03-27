@@ -19,6 +19,7 @@ class Calculator extends Component
 
     public function calculate()
     {
+        sleep(2);
         $expression = "return $this->n1 $this->operator $this->n2;";
         $this->result = eval($expression); 
     }
