@@ -18,6 +18,6 @@ class UserList extends Component
     #[Computed]
     public function users()
     {
-        return User::query()->paginate();
+        return User::query()->orderByDesc('created_at')->paginate();
     }
 }
