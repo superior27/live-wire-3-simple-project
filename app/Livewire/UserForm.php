@@ -9,27 +9,27 @@ use Livewire\Component;
 
 class UserForm extends Component
 {
-    // #[Validate([
-    //     'required',
-    //     'min:3',
-    //     'max: 200',
-    // ])]
+    #[Validate([
+        'required',
+        'min:3',
+        'max: 200',
+    ])]
     public string $name;
 
-    // #[Validate([
-    //     'required',
-    //     'email',
-    //     'min:7',
-    //     'max:200'
-    // ])]
+    #[Validate([
+        'required',
+        'email',
+        'min:7',
+        'max:200'
+    ])]
     public string $email;
 
-    // #[Validate([
-    //     'required',
-    //     'min:4',
-    //     'max:200',
-    //     'confirmed'
-    // ])]
+    #[Validate([
+        'required',
+        'min:4',
+        'max:200',
+        'confirmed'
+    ])]
     public string $password;
     public string $password_confirmation;
 
@@ -48,16 +48,16 @@ class UserForm extends Component
         ]);
     }
 
-    public function rules(){
-        return [
-            'name' => ['required', 'min:3','max: 200'],
-            'email' => ['required', 'email', 'min:7','max: 200'],
-            'password' => ['required', 'min:4','max: 200', 'confirmed']
-        ];
-    }
+    // public function rules(){
+    //     return [
+    //         'name' => ['required', 'min:3','max: 200'],
+    //         'email' => ['required', 'email', 'min:7','max: 200'],
+    //         'password' => ['required', 'min:4','max: 200', 'confirmed']
+    //     ];
+    // }
 
-    public function updated($attr, $value)
-    {
-        $this->validateOnly($attr);
-    }
+    // public function updated($attr, $value)
+    // {
+    //     $this->validateOnly($attr);
+    // }
 }
