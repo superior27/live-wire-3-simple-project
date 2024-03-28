@@ -3,6 +3,7 @@
     <div>
         <x-text-input placeholder="User Name" wire:model.blur="form.name"/>
         @error('form.name') <div class="text-sm italic font-semibold text-red-400">{{ $message }}</div> @enderror
+        <div wire:dirty wire:target='form.name' class="text-sm italic font-semibold text-yellow-400">Changed, but not saved...</div>
     </div>
 
     
